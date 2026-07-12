@@ -1,0 +1,49 @@
+name: Idea
+description: A feature or improvement worth considering
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem does this solve? Be specific about who is affected and how.
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed approach
+      description: How might this be solved?
+    validations:
+      required: false
+  - type: textarea
+    id: success_criteria
+    attributes:
+      label: Success criteria
+      description: >
+        Measurable conditions that define "done". Each criterion must be
+        verifiable, something you can check with a test, a screenshot,
+        or a concrete assertion. Vague criteria like "works well" are
+        not acceptable.
+      placeholder: |
+        - [ ] <observable, testable outcome>
+        - [ ] <observable, testable outcome>
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & mitigations
+      description: What could go wrong? What is the mitigation for each risk?
+      placeholder: |
+        Risk: <what might break or regress>
+        Mitigation: <how to prevent or recover>
+    validations:
+      required: false
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: What should this explicitly not do?
+    validations:
+      required: false

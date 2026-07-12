@@ -1,0 +1,42 @@
+name: Task
+description: A unit of work to be done
+labels: []
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What
+      description: What needs to be built or changed?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is explicitly in and out of scope?
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Success criteria
+      description: >
+        Write each criterion as an ATIR-style assertion: a concrete,
+        independently verifiable statement that is either true or false
+        at done-time. Each item must be checkable by running a command,
+        reading an output, or observing a specific behaviour, not by
+        asking "does it feel right?".
+      placeholder: |
+        - [ ] `<command>` exits 0
+        - [ ] <endpoint> returns <status> with <body shape>
+        - [ ] <observable UI or CLI behaviour>
+        - [ ] No regressions in existing test suite
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Anything that must be done first?
+    validations:
+      required: false
